@@ -215,10 +215,7 @@ export const ChatInput = ({
     return (
         <div
             className={cn(
-                'bg-secondary w-full',
-                currentThreadId
-                    ? 'absolute bottom-0'
-                    : 'absolute inset-0 flex h-full w-full flex-col items-center justify-center'
+                'bg-secondary w-full absolute inset-0 flex h-full w-full flex-col items-center justify-center'
             )}
             style={{
                 position: 'relative',
@@ -228,6 +225,15 @@ export const ChatInput = ({
                 backgroundPosition: "center"
             }}
         >
+            {/* Top blur overlay to replace white strip */}
+            <div
+                className="absolute top-0 left-0 w-full h-8 pointer-events-none z-20"
+                style={{
+                    backdropFilter: "blur(12px)",
+                    WebkitBackdropFilter: "blur(12px)",
+                    background: "linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0))"
+                }}
+            />
             <div
                 className={cn(
                     'mx-auto flex w-full max-w-3xl flex-col items-start',
