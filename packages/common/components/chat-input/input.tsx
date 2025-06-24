@@ -94,8 +94,6 @@ export const ChatInput = ({
         imageAttachment?.base64 && formData.append('imageAttachment', imageAttachment?.base64);
         const threadItems = currentThreadId ? await getThreadItems(currentThreadId.toString()) : [];
 
-        console.log('threadItems', threadItems);
-
         handleSubmit({
             formData,
             newThreadId: threadId,
@@ -222,6 +220,13 @@ export const ChatInput = ({
                     ? 'absolute bottom-0'
                     : 'absolute inset-0 flex h-full w-full flex-col items-center justify-center'
             )}
+            style={{
+                position: 'relative',
+                overflow: 'hidden',
+                backgroundImage: "url('/icons/bg.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+            }}
         >
             <div
                 className={cn(
