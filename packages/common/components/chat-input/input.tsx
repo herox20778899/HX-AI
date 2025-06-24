@@ -215,6 +215,7 @@ export const ChatInput = ({
     return (
         <div
             className={cn(
+                // Always fills the screen, even in chat
                 'bg-secondary w-full absolute inset-0 flex h-full w-full flex-col items-center justify-center'
             )}
             style={{
@@ -225,13 +226,13 @@ export const ChatInput = ({
                 backgroundPosition: "center"
             }}
         >
-            {/* Top blur overlay to replace white strip */}
+            {/* BLUR ONLY, NO WHITE */}
             <div
                 className="absolute top-0 left-0 w-full h-8 pointer-events-none z-20"
                 style={{
                     backdropFilter: "blur(12px)",
                     WebkitBackdropFilter: "blur(12px)",
-                    background: "linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0))"
+                    // No background color/gradient, pure blur!
                 }}
             />
             <div
