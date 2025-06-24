@@ -167,6 +167,13 @@ html.dark .shiki span {
   z-index: 2;
 }
 
+/* Blur-only strip overlay for top of chat container */
+.blur-strip {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  /* No background or color, just blur */
+}
+
 mark.prompt-highlight {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
