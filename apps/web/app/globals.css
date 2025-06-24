@@ -155,6 +155,18 @@ html.dark .shiki span {
     }
 }
 
+/* translucent glassy effect for the chat input */
+.translucent-input-bg {
+  background: rgba(0,0,0,0.4) !important;
+  color: #fff;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  position: relative;
+  z-index: 2;
+}
+
 mark.prompt-highlight {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
