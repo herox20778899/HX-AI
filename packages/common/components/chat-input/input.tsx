@@ -228,6 +228,12 @@ export const ChatInput = ({
                 backgroundPosition: "center"
             }}
         >
+            {/* Blur-only overlay at the top, no white */}
+            <div
+                className="absolute left-0 top-0 w-full h-8 z-20 pointer-events-none blur-strip"
+                aria-hidden="true"
+            />
+
             <div
                 className={cn(
                     'mx-auto flex w-full max-w-3xl flex-col items-start',
